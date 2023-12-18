@@ -192,7 +192,7 @@
 	form {
 		display: grid;
 		grid-template-columns: 2.5fr minmax(120px, 1fr);
-		@media (max-width: $breakpoint375) {
+		@media (max-width: $breakpoint480) {
 			grid-template-columns: 170px 120px;
 			justify-content: center;
 		}

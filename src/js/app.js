@@ -52,9 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	addEventListenerIfExists('.search-btn', 'click', function (event) {
 		const searchPopup = $('.search-popup')
-		const searchInput = $('.search-popup  input')
 		searchPopup.classList.toggle('active')
-		searchInput.focus()
 		event.stopPropagation()
 	})
 
