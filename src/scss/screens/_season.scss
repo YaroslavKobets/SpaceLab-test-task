@@ -1,0 +1,110 @@
+.season {
+	&__row {
+		display: flex;
+		align-items: center;
+		@media (max-width: 1600px) {
+			gap: 20px;
+			padding: 0 15px;
+			> div {
+				max-width: 50%;
+			}
+		}
+		@media (max-width: $breakpoint992) {
+			flex-wrap: wrap;
+			> div {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__slider {
+		width: 100%;
+		max-width: 100%;
+		padding: 93px 15px;
+
+		@media (max-width: 1600px) {
+			padding: 0;
+		}
+		@media (max-width: $breakpoint992) {
+			padding: 40px 0;
+		}
+		@media (max-width: $breakpoint576) {
+			padding: 30px 0;
+		}
+		.swiper {
+			margin-top: 25px;
+			width: 100%;
+			max-width: 880px;
+			height: auto;
+		}
+	}
+
+	&__catalog {
+		width: 100%;
+		max-width: calc(880 / 1920 * 100%);
+		position: relative;
+		@media (max-width: 1600px) {
+			max-width: 100%;
+		}
+	}
+	&__catalog-controls {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		left: 50%;
+		bottom: 100px;
+		transform: translateX(-50%);
+		a {
+			margin-top: 25px;
+		}
+		@media (max-width: $breakpoint1200) {
+			bottom: 50%;
+			transform: translate(-50%, 50%);
+		}
+	}
+
+	&__poster {
+		width: 100%;
+		max-width: calc(936 / 1920 * 100%);
+		@media (max-width: 1600px) {
+			max-width: 100%;
+		}
+		@media (max-width: $breakpoint992) {
+			display: none;
+		}
+	}
+
+	&__content {
+		margin-left: 160px;
+		max-width: 628px;
+		text-align: center;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h2 {
+			margin-bottom: 25px;
+		}
+		a {
+			margin-top: 64px;
+		}
+		@media (max-width: 1600px) {
+			margin-left: 0;
+		}
+		@media (max-width: $breakpoint1200) {
+			p {
+				font-size: 12px;
+			}
+			a {
+				margin-top: 25px;
+			}
+		}
+		@media (max-width: $breakpoint992) {
+			padding: 40px 0;
+		}
+		@media (max-width: $breakpoint576) {
+			padding: 30px 0;
+		}
+	}
+}

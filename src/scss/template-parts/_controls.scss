@@ -1,0 +1,48 @@
+.controls {
+	width: 100%;
+	max-width: 1140px;
+	padding: 14px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #969696;
+	font-size: 12px;
+	margin: 0 auto;
+
+	svg {
+		fill: #969696;
+		margin-right: 15px;
+		transition: all 0.3s ease-in-out 0s;
+	}
+	a {
+		display: flex;
+		align-items: center;
+		transition: all 0.3s ease-in-out 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				svg {
+					fill: #fff;
+				}
+				color: #fff;
+			}
+		}
+	}
+	@media (max-width: $breakpoint768) {
+		padding-block: 5px;
+		svg {
+			margin-right: 5px;
+		}
+		span {
+			display: none;
+		}
+	}
+}
+.info {
+	display: flex;
+	align-items: center;
+}
+.phone {
+}
+.enter {
+}

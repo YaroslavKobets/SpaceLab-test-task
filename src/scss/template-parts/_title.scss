@@ -1,0 +1,28 @@
+.section-title {
+	font-family: $secondFontMain;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: calc(48 / 36 * 100%);
+	text-transform: uppercase;
+	color: $color-main;
+	text-align: center;
+	width: 100%;
+	padding: 0 15px 25px;
+	position: relative;
+	&::after {
+		content: '';
+		width: 120px;
+		height: 1px;
+		background-color: $color-main;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	@media (max-width: $breakpoint992) {
+		font-size: 32px;
+	}
+	@media (max-width: $breakpoint576) {
+		font-size: 26px;
+	}
+}

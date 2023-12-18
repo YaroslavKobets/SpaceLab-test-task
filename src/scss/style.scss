@@ -1,0 +1,16 @@
+//===== <GLOBAL FILES> ===================================
+@import './global/vars';
+@import './global/reset';
+@import './global/global';
+//===== </GLOBAL FILES> ===================================
+
+@import './template-parts/header';
+@import './template-parts/buttons';
+@import './template-parts/title';
+@import './template-parts/controls';
+@import './screens/intro';
+@import './screens/season';
+@import './screens/gallery';
+@import './screens/posts';
+@import './screens/partners';
+@import './screens/footer';

@@ -1,0 +1,63 @@
+.intro {
+	position: relative;
+	min-height: 810px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	@media (max-width: $breakpoint992) {
+		min-height: 540px;
+	}
+	@media (max-width: $breakpoint480) {
+		min-height: calc(100vh - 80px);
+	}
+	> img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		max-width: 730px;
+		padding: 0 15px;
+	}
+
+	&__logo {
+		width: 320px;
+		height: 320px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		border: 4px solid #fff;
+		@media (max-width: $breakpoint576) {
+			width: 280px;
+			height: 280px;
+		}
+	}
+
+	&__city {
+		font-size: 22px;
+		text-transform: uppercase;
+		margin-top: 7px;
+	}
+
+	&__text {
+		font-size: 16px;
+		text-transform: uppercase;
+		margin-top: 80px;
+		@media (max-width: $breakpoint992) {
+			margin-top: 40px;
+		}
+		@media (max-width: $breakpoint576) {
+			font-size: 14px;
+		}
+	}
+}

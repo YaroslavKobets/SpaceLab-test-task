@@ -1,0 +1,27 @@
+@use 'sass:math';
+//===== <CONTAINER & BREAKPOINTS> ===================================
+$maxWidthWrapper: 1920;
+$minWidthWrapper: 320;
+
+$maxWidthContainer: 1920;
+$containerPadding: 0;
+$containerWidth: $maxWidthContainer + $containerPadding;
+$containerSidePadding: math.div($containerPadding, 2);
+
+$breakpoint1450: 1449.98 + px;
+$breakpoint1200: 1199.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint576: 575.98 + px;
+$breakpoint480: 479.98 + px;
+$breakpoint375: 379.98 + px;
+//===== <COLORS> ===================================
+$color-main: #fff;
+$color-bg: #000000;
+
+//===== <FONTS> ===================================
+$baseFontMain: 'PT Sans', sans-serif;
+$secondFontMain: 'Playfair Display', serif;
+$baseFontSize: 14;
+$baseFontWeight: 400;
+$baseLineHeight: 1.5;
