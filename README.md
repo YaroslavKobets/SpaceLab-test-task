@@ -18,4 +18,4 @@ HTML / CSS / JS / Swiper
 
 ## Зведення
 
-![Таблиця прогресу](./img/total.png)
+![Таблиця прогресу](./src/img/total.png)
