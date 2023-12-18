@@ -1,6 +1,6 @@
 # Yaroslav Kobets - Space Lab test task
 
-## [Посилання на розгорнутий проект]()
+## [Посилання на розгорнутий проект](https://yaroslavkobets.github.io/SpaceLab-test-task/)
 
 ## Завдання
 
@@ -18,4 +18,4 @@ HTML / CSS / JS / Swiper
 
 ## Зведення
 
-![Таблиця прогресу]()
+![Таблиця прогресу](./img/total.png)
