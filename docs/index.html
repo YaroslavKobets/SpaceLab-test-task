@@ -7,14 +7,14 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-		href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Playfair+Display:wght@400;700&display=swap&_v=20231218031527"
+		href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Playfair+Display:wght@400;700&display=swap&_v=20231218175445"
 		rel="stylesheet"
 	/>
 	<link
 		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231218031527"
+		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20231218175445"
 	/>
-	<link rel="stylesheet" href="./css/style.min.css?_v=20231218031527" />
+	<link rel="stylesheet" href="./css/style.min.css?_v=20231218175445" />
 	<link rel="shortcut icon" href="img/favicon.ico" />
 </head>
 
@@ -73,16 +73,24 @@
 				</nav>
 			</div>
 			<div class="header__controls">
-				<div class="control" href="">
+				<a class="control" href="/">
 					<img src="img/svg/cart.svg" alt="" />
-				</div>
-				<div class="control" href="">
+				</a>
+				<button class="control search-btn" href="/">
 					<img src="img/svg/search.svg" alt="" />
-				</div>
+				</button>
 				<div class="menu__icon" href="">
 					<span></span>
 				</div>
 			</div>
+		</div>
+		<div class="search-popup">
+			<form>
+				<input type="text" placeholder="Знайти годинник..." />
+				<button type="button" class="button">
+					<img src="img/svg/search.svg" alt="" /> Знайти
+				</button>
+			</form>
 		</div>
 	</div>
 </header>
@@ -425,11 +433,15 @@
 					світових брендів за найкращою ціною. Ми дбаємо про комфорт наших
 					покупців і постійно розширюємо можливості сервісного обслуговування.
 				</p>
-				<div>
-					<input type="text" placeholder="Ваша пошта" /><button class="button">
+				<form id="subscriptionForm">
+					<input type="email" id="emailInput" placeholder="Ваша пошта" /><button
+						onclick="validateEmail()"
+						class="button"
+					>
 						ПІДПИСАТИСЯ
 					</button>
-				</div>
+					<div class="error-message" id="error-message"></div>
+				</form>
 			</div>
 		</div>
 		<div class="footer__bottom">
@@ -440,8 +452,8 @@
 </footer>
 
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231218031527"></script>
-<script src="./js/app.min.js?_v=20231218031527"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231218175445"></script>
+<script src="./js/app.min.js?_v=20231218175445"></script>
 
 	</body>
 </html>

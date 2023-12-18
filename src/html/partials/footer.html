@@ -33,11 +33,15 @@
 					світових брендів за найкращою ціною. Ми дбаємо про комфорт наших
 					покупців і постійно розширюємо можливості сервісного обслуговування.
 				</p>
-				<div>
-					<input type="text" placeholder="Ваша пошта" /><button class="button">
+				<form id="subscriptionForm">
+					<input type="email" id="emailInput" placeholder="Ваша пошта" /><button
+						onclick="validateEmail()"
+						class="button"
+					>
 						ПІДПИСАТИСЯ
 					</button>
-				</div>
+					<div class="error-message" id="error-message"></div>
+				</form>
 			</div>
 		</div>
 		<div class="footer__bottom">

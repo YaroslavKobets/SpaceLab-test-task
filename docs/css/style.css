@@ -183,6 +183,7 @@ img {
 .header__logo {
   max-width: 104px;
   margin-right: auto;
+  z-index: 11;
 }
 
 .header__controls {
@@ -235,17 +236,12 @@ img {
 }
 
 .menu__icon {
-  position: relative;
   z-index: 11;
-  margin-left: 15px;
-}
-
-.menu__icon {
-  z-index: 5;
   display: block;
   position: relative;
   width: 30px;
   height: 18px;
+  margin-left: 15px;
   cursor: pointer;
 }
 
@@ -299,6 +295,78 @@ img {
   -webkit-transform: rotate(45deg) translate(0px, 50%);
   -ms-transform: rotate(45deg) translate(0px, 50%);
   transform: rotate(45deg) translate(0px, 50%);
+}
+
+.search-popup {
+  position: absolute;
+  left: 0;
+  top: 125%;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: auto;
+  z-index: 9;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  padding: 10px 15px;
+  background-color: rgba(15, 15, 15, 0.9);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.search-popup form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.5fr minmax(120px, 1fr);
+  grid-template-columns: 2.5fr minmax(120px, 1fr);
+}
+
+.search-popup input {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.search-popup input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.search-popup input::-moz-placeholder {
+  color: #fff;
+}
+
+.search-popup input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.search-popup input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.search-popup input::placeholder {
+  color: #fff;
+}
+
+.search-popup .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search-popup .button img {
+  margin-right: 10px;
+}
+
+.search-popup.active {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
 }
 
 .button {
@@ -655,8 +723,20 @@ img {
   gap: 145px;
 }
 
+.post:hover img {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .post__img {
   width: 100%;
+  overflow: hidden;
+}
+
+.post__img img {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .post__content {
@@ -781,39 +861,47 @@ img {
   color: #d0d0d0;
 }
 
-.footer__column > div {
+.footer__column > form {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 137px;
   grid-template-columns: 1fr 137px;
   margin-top: 27px;
+  position: relative;
 }
 
-.footer__column > div input {
+.footer__column > form input {
   width: 100%;
   padding: 10px 20px;
   background: rgba(255, 255, 255, 0.4);
   color: #fff;
 }
 
-.footer__column > div input::-webkit-input-placeholder {
-  color: #969696;
+.footer__column > form input::-webkit-input-placeholder {
+  color: #fff;
 }
 
-.footer__column > div input::-moz-placeholder {
-  color: #969696;
+.footer__column > form input::-moz-placeholder {
+  color: #fff;
 }
 
-.footer__column > div input:-ms-input-placeholder {
-  color: #969696;
+.footer__column > form input:-ms-input-placeholder {
+  color: #fff;
 }
 
-.footer__column > div input::-ms-input-placeholder {
-  color: #969696;
+.footer__column > form input::-ms-input-placeholder {
+  color: #fff;
 }
 
-.footer__column > div input::placeholder {
-  color: #969696;
+.footer__column > form input::placeholder {
+  color: #fff;
+}
+
+.footer__column > form .error-message {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  color: red;
 }
 
 .footer__title {
@@ -1016,8 +1104,10 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(15, 15, 15, 0.9);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
     position: fixed;
-    top: 80px;
+    top: 28px;
     right: -100%;
     z-index: 10;
     -webkit-box-orient: vertical;
@@ -1025,8 +1115,6 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 100px 15px 20px;
-    -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
   }
@@ -1178,6 +1266,16 @@ img {
 
   .intro {
     min-height: calc(100vh - 80px);
+  }
+}
+
+@media (max-width: 379.98px) {
+  .search-popup form {
+    -ms-grid-columns: 170px 120px;
+    grid-template-columns: 170px 120px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

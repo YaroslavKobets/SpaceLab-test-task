@@ -38,11 +38,20 @@
 		grid-template-columns: 1fr;
 		gap: 20px;
 	}
+	&:hover {
+		img {
+			transform: scale(1.05);
+		}
+	}
 }
 .post__img {
 	width: 100%;
+	overflow: hidden;
 	@media (min-width: $breakpoint1450) {
 		max-width: calc(989 / 1920 * 100%);
+	}
+	img {
+		transition: all 0.3s ease-in-out 0s;
 	}
 }
 .post__content {
