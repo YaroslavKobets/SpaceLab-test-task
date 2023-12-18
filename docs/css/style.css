@@ -224,7 +224,7 @@ img {
 
 .menu ul li a {
   display: block;
-  color: 969696;
+  color: #969696;
   text-transform: uppercase;
   padding: 31px 15px;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -516,6 +516,11 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   border: 4px solid #fff;
+}
+
+.intro__logo img {
+  padding-bottom: 15px;
+  border-bottom: 2px solid #fff;
 }
 
 .intro__city {
@@ -822,6 +827,7 @@ img {
   height: 100%;
   background-image: url("../img/footer-bg.jpg");
   background-position: center;
+  background-size: contain;
   position: absolute;
   top: 0;
   left: 0;
@@ -1260,22 +1266,20 @@ img {
 }
 
 @media (max-width: 479.98px) {
-  .button_wb {
-    font-size: 16px;
-  }
-
-  .intro {
-    min-height: calc(100vh - 80px);
-  }
-}
-
-@media (max-width: 379.98px) {
   .search-popup form {
     -ms-grid-columns: 170px 120px;
     grid-template-columns: 170px 120px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .button_wb {
+    font-size: 16px;
+  }
+
+  .intro {
+    min-height: calc(100vh - 80px);
   }
 }
 
